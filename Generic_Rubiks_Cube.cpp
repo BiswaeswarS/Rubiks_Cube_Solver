@@ -3,7 +3,7 @@
 //
 
 #include "Generic_Rubiks_Cube.h"
-char RubiksCube::getColorLetter(COLOR color) {
+char Generic_Rubiks_Cube::getColorLetter(COLOR color) {
     switch (color) {
         case COLOR::BLUE:
             return 'B';
@@ -23,7 +23,7 @@ char RubiksCube::getColorLetter(COLOR color) {
 /*
  * Describe a move using an index
  */
-string RubiksCube::getMove(MOVE ind) {
+string Generic_Rubiks_Cube::getMove(MOVE ind) {
     switch (ind) {
         case MOVE::L:
             return "L";
@@ -67,7 +67,7 @@ string RubiksCube::getMove(MOVE ind) {
 /*
  * Perform a move operation on using a Move index.
  */
-RubiksCube &RubiksCube::move(MOVE ind) {
+Generic_Rubiks_Cube &Generic_Rubiks_Cube::move(MOVE ind) {
     switch (ind) {
         case MOVE::L:
             return this->l();
@@ -111,7 +111,7 @@ RubiksCube &RubiksCube::move(MOVE ind) {
 /*
  * Invert a move.
  */
-RubiksCube &RubiksCube::invert(MOVE ind) {
+Generic_Rubiks_Cube &Generic_Rubiks_Cube::invert(MOVE ind) {
     switch (ind) {
         case MOVE::L:
             return this->lPrime();
@@ -152,7 +152,7 @@ RubiksCube &RubiksCube::invert(MOVE ind) {
     }
 }
 
-void RubiksCube::print() const {
+void Generic_Rubiks_Cube::print() const {
     cout << "Rubik's Cube:\n\n";
 
     for (int row = 0; row <= 2; row++) {
@@ -200,7 +200,7 @@ void RubiksCube::print() const {
     cout << "\n";
 }
 
-vector<RubiksCube::MOVE> RubiksCube::randomShuffleCube(unsigned int times) {
+vector<Generic_Rubiks_Cube::MOVE> Generic_Rubiks_Cube::randomShuffleCube(unsigned int times) {
     vector<MOVE> moves_performed;
     srand(time(0));
     for (unsigned int i = 0; i < times; i++) {
@@ -212,7 +212,7 @@ vector<RubiksCube::MOVE> RubiksCube::randomShuffleCube(unsigned int times) {
 }
 
 //Helper function returns string of corner
-string RubiksCube::getCornerColorString(uint8_t ind) const {
+string Generic_Rubiks_Cube::getCornerColorString(uint8_t ind) const {
     string str = "";
 
     switch (ind) {
@@ -275,7 +275,7 @@ string RubiksCube::getCornerColorString(uint8_t ind) const {
     return str;
 }
 
-uint8_t RubiksCube::getCornerIndex(uint8_t ind) const {
+uint8_t Generic_Rubiks_Cube::getCornerIndex(uint8_t ind) const {
     string corner = getCornerColorString(ind);
 
     uint8_t ret = 0;
@@ -302,7 +302,7 @@ uint8_t RubiksCube::getCornerIndex(uint8_t ind) const {
     return ret;
 }
 
-uint8_t RubiksCube::getCornerOrientation(uint8_t ind) const {
+uint8_t Generic_Rubiks_Cube::getCornerOrientation(uint8_t ind) const {
     string corner = getCornerColorString(ind);
 
     string actual_str = "";

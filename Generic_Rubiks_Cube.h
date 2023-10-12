@@ -4,7 +4,16 @@
 
 #ifndef RUBIKS_CUBE_SOLVER_GENERIC_RUBIKS_CUBE_H
 #define RUBIKS_CUBE_SOLVER_GENERIC_RUBIKS_CUBE_H
+#include "bits/stdc++.h"
 
+using namespace std;
+
+/**
+ * A base class for all Rubik's Cube Model. There are various representation for Rubik's Cube.
+ * Each one has it's own special ways of definitions. This class provides a shared functionality
+ * between all models.
+ * We'll benchmark all models and observe which one is better for performance.
+ */
 
 class Generic_Rubiks_Cube {
 public:
@@ -112,12 +121,12 @@ public:
     /*
      * Perform moves on the Rubik Cube
      */
-    RubiksCube &move(MOVE ind);
+    Generic_Rubiks_Cube &move(MOVE ind);
 
     /*
      * Invert a move
      */
-    RubiksCube &invert(MOVE ind);
+    Generic_Rubiks_Cube &invert(MOVE ind);
 
     /*
      * Rotational Moves on the Rubik Cubes
@@ -130,41 +139,41 @@ public:
      * B, B’, B2
      */
 
-    virtual RubiksCube &f() = 0;
+    virtual Generic_Rubiks_Cube &f() = 0;
 
-    virtual RubiksCube &fPrime() = 0;
+    virtual Generic_Rubiks_Cube &fPrime() = 0;
 
-    virtual RubiksCube &f2() = 0;
+    virtual Generic_Rubiks_Cube &f2() = 0;
 
-    virtual RubiksCube &u() = 0;
+    virtual Generic_Rubiks_Cube &u() = 0;
 
-    virtual RubiksCube &uPrime() = 0;
+    virtual Generic_Rubiks_Cube &uPrime() = 0;
 
-    virtual RubiksCube &u2() = 0;
+    virtual Generic_Rubiks_Cube &u2() = 0;
 
-    virtual RubiksCube &l() = 0;
+    virtual Generic_Rubiks_Cube &l() = 0;
 
-    virtual RubiksCube &lPrime() = 0;
+    virtual Generic_Rubiks_Cube &lPrime() = 0;
 
-    virtual RubiksCube &l2() = 0;
+    virtual Generic_Rubiks_Cube &l2() = 0;
 
-    virtual RubiksCube &r() = 0;
+    virtual Generic_Rubiks_Cube &r() = 0;
 
-    virtual RubiksCube &d() = 0;
+    virtual Generic_Rubiks_Cube &d() = 0;
 
-    virtual RubiksCube &dPrime() = 0;
+    virtual Generic_Rubiks_Cube &dPrime() = 0;
 
-    virtual RubiksCube &d2() = 0;
+    virtual Generic_Rubiks_Cube &d2() = 0;
 
-    virtual RubiksCube &rPrime() = 0;
+    virtual Generic_Rubiks_Cube &rPrime() = 0;
 
-    virtual RubiksCube &r2() = 0;
+    virtual Generic_Rubiks_Cube &r2() = 0;
 
-    virtual RubiksCube &b() = 0;
+    virtual Generic_Rubiks_Cube &b() = 0;
 
-    virtual RubiksCube &bPrime() = 0;
+    virtual Generic_Rubiks_Cube &bPrime() = 0;
 
-    virtual RubiksCube &b2() = 0;
+    virtual Generic_Rubiks_Cube &b2() = 0;
 
     string getCornerColorString(uint8_t ind) const;
 
