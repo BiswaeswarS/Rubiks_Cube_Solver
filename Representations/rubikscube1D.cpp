@@ -1,7 +1,7 @@
 //
 // Created by bsaha on 12-10-2023.
 //
-#include "../Generic_Rubiks_Cube.h"
+#include "Generic_Rubiks_Cube.h"
 
 class rubikscube1D : public Generic_Rubiks_Cube {
 private:
