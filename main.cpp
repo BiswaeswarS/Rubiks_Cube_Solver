@@ -1,6 +1,8 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
+#include "Representations\rubikscube1D.cpp"
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    rubikscube1D obj;
+    obj.randomShuffleCube(100);
+    obj.print();
     return 0;
 }
