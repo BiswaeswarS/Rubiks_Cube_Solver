@@ -8,5 +8,6 @@ add_executable(Rubiks_Cube_Solver main.cpp
         Representations/rubikscube3D.cpp
         Representations/Generic_Rubiks_Cube.cpp
         Representations/Generic_Rubiks_Cube.h
-        Solvers/DFSSolver.cpp
+        Solvers/DFSSolver.h
+        Solvers/BFSSolver.h
 )

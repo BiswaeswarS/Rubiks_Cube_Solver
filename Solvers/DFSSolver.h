@@ -11,7 +11,7 @@
 // Typename T: RubiksCube Representation used (3d, 1d, Bitboard)
 // Typename H: Corresponding Hash function
 
-template<typename T>
+template<typename T,typename H>
 class DFSSolver {
 private:
 
