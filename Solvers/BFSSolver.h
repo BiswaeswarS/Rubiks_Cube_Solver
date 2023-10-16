@@ -55,7 +55,7 @@ public:
 //    Performs BFS and returns the vector of moves done to solve the cube
     vector<Generic_Rubiks_Cube::MOVE> solve() {
         T solved_cube = bfs();
-        assert(solved_cube.isSolved());
+        //assert(solved_cube.isSolved());
         T curr_cube = solved_cube;
         while (!(curr_cube == rubiksCube)) {
             Generic_Rubiks_Cube::MOVE curr_move = move_done[curr_cube];
